@@ -1,156 +1,923 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#142B3B">
-  <meta name="description" content="Bizora helps local businesses build an online presence, share product catalogues and take practical steps towards digital growth.">
-  <title>Bizora — Business, Made More Digital</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-  <script src="./home.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bizora — Your Business. Ready for More.</title>
+
+    <meta
+        name="description"
+        content="Build your digital business presence with Bizora. Create a product catalogue, share your business online, and discover smarter ways to grow."
+    >
+
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./script.js" defer></script>
 </head>
+
 <body>
-  <header class="site-header" id="site-header">
-    <nav class="nav-shell" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="Bizora home"><span class="brand-mark">b.</span><span class="brand-name">bizora</span></a>
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span></button>
-      <div class="primary-navigation" id="primary-navigation">
-        <a href="#platform">Platform</a>
-        <a href="#approach">How it works</a>
-        <a href="#about">About</a>
-        <div class="nav-actions">
-          <a class="nav-signin" href="./login.html">Sign in</a>
-          <a class="button button-dark nav-cta" href="./register.html">Get started <span aria-hidden="true">↗</span></a>
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="#home" class="brand" aria-label="Bizora home">
+                <span class="brand-mark">b.</span>
+                <span class="brand-name">bizora</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+                <a href="#platform">Platform</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#safety">Payment safety</a>
+                <a href="#about">About</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="./login.html" class="sign-in">Sign in</a>
+
+                <a href="./register.html" class="button button-primary header-cta">
+                    Get started
+                    <span class="arrow" aria-hidden="true">↗</span>
+                </a>
+            </div>
+
         </div>
-      </div>
-    </nav>
-  </header>
+    </header>
 
-  <main>
-    <section class="hero section-shell" id="home">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> A more practical way to go digital</p>
-        <h1>Run your business.<br><span>Open new possibilities.</span></h1>
-        <p class="hero-description">Bring your products, business information and digital tools together. Start with what matters to your business.</p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="./register.html">Get started <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="#platform">Explore the platform <span aria-hidden="true">↓</span></a>
-        </div>
-        <p class="hero-note"><span aria-hidden="true">✓</span> Designed for everyday business owners</p>
-      </div>
 
-      <div class="product-preview" aria-label="Illustrative preview of the Bizora platform">
-        <div class="preview-topbar">
-          <a class="preview-brand" href="#home"><span class="preview-brand-mark">b.</span> bizora</a>
-          <span class="preview-label">PRODUCT PREVIEW</span>
-        </div>
-        <div class="preview-main">
-          <p class="preview-overline">YOUR BUSINESS SPACE</p>
-          <h2>Make it easier to find you.</h2>
-          <p class="preview-description">One place for the essentials your customers need to know.</p>
-          <div class="preview-business">
-            <span class="business-symbol" aria-hidden="true">B</span>
-            <div class="business-details"><span class="preview-overline">BUSINESS PROFILE</span><strong>Your business name</strong><span>Products · Contact · Information</span></div>
-            <span aria-hidden="true">↗</span>
-          </div>
-          <div class="preview-tools-heading"><span>YOUR DIGITAL ESSENTIALS</span><span>01 — 03</span></div>
-          <a class="preview-tool" href="./register.html"><span class="tool-number">01</span><span class="tool-content"><strong>Product catalogue</strong><span>Show what you offer</span></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
-          <a class="preview-tool" href="./register.html"><span class="tool-number">02</span><span class="tool-content"><strong>Online presence</strong><span>Give customers one place to find you</span></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
-          <a class="preview-tool" href="./register.html"><span class="tool-number">03</span><span class="tool-content"><strong>Next steps</strong><span>Find areas to improve</span></span><span class="tool-arrow" aria-hidden="true">↗</span></a>
-        </div>
-        <div class="preview-bottom"><span class="status-dot"></span> YOUR BUSINESS, YOUR PACE</div>
-      </div>
-    </section>
+    <main>
 
-    <div class="principles-strip" aria-label="Our principles">
-      <div class="section-shell principles-inner"><span>LESS COMPLEXITY</span><span>MORE CLARITY</span><span>ROOM TO GROW</span></div>
-    </div>
+        <!-- HERO -->
 
-    <section class="platform-section section-shell" id="platform">
-      <div class="section-intro">
-        <p class="section-index">01 / THE PLATFORM</p>
-        <h2>Digital essentials.<br><span>Without unnecessary complexity.</span></h2>
-        <p>Practical tools to help your business become easier to discover, understand and connect with.</p>
-      </div>
-      <div class="feature-list">
-        <article class="feature-row">
-          <span class="feature-number">01</span>
-          <h3>Product catalogue</h3>
-          <div class="feature-description"><p>Organise products or services with clear names, descriptions and prices. Share your catalogue so customers can explore what you offer.</p><a class="feature-link" href="./register.html">Create your business space <span aria-hidden="true">↗</span></a></div>
-        </article>
-        <article class="feature-row">
-          <span class="feature-number">02</span>
-          <h3>Business presence</h3>
-          <div class="feature-description"><p>Bring essential business information, contact details and your catalogue together in one shareable destination.</p><a class="feature-link" href="./register.html">Set up your business <span aria-hidden="true">↗</span></a></div>
-        </article>
-        <article class="feature-row">
-          <span class="feature-number">03</span>
-          <h3>Payment confidence</h3>
-          <div class="feature-description"><p>Learn safer payment practices and verify receipts through your payment app. Payment-provider integration can support automated status updates when implemented.</p><a class="feature-link" href="#safety">Explore payment safety <span aria-hidden="true">↗</span></a></div>
-        </article>
-        <article class="feature-row">
-          <span class="feature-number">04</span>
-          <h3>Online growth</h3>
-          <div class="feature-description"><p>Discover practical ways to improve visibility, share your catalogue and help more customers find your business.</p><a class="feature-link" href="./register.html">Find your next step <span aria-hidden="true">↗</span></a></div>
-        </article>
-      </div>
-    </section>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
 
-    <section class="safety-section" id="safety">
-      <div class="section-shell safety-layout">
-        <div class="safety-heading">
-          <p class="section-index">02 / DIGITAL CONFIDENCE</p>
-          <h2>Know what to trust.<br><span>Protect what you've built.</span></h2>
-          <p>Simple habits can make everyday digital transactions safer.</p>
-        </div>
-        <ul class="safety-guidance">
-          <li><span aria-hidden="true">✓</span><p><strong>Check your payment app.</strong> Confirm that money has arrived before treating a payment as received.</p></li>
-          <li><span aria-hidden="true">✓</span><p><strong>Keep your UPI PIN private.</strong> Never share it to receive money.</p></li>
-          <li><span aria-hidden="true">✓</span><p><strong>Don't trust screenshots alone.</strong> Check the actual transaction status in your payment app.</p></li>
-        </ul>
-      </div>
-    </section>
+                <div class="hero-copy">
 
-    <section class="approach-section section-shell" id="approach">
-      <div class="approach-header">
-        <p class="section-index">03 / GETTING STARTED</p>
-        <h2>A simple start.<br><span>Progress on your terms.</span></h2>
-      </div>
-      <div class="process-line">
-        <article class="process-step"><span class="process-number">01</span><h3>Set up</h3><p>Tell us about your business and the digital tools you already use.</p></article>
-        <article class="process-step"><span class="process-number">02</span><h3>Understand</h3><p>Review your setup and identify useful areas to improve.</p></article>
-        <article class="process-step"><span class="process-number">03</span><h3>Take action</h3><p>Choose practical next steps that fit your business.</p></article>
-      </div>
-    </section>
+                    <div class="hero-label">
+                        <span aria-hidden="true"></span>
+                        A simpler way to go digital
+                    </div>
 
-    <section class="about-section section-shell" id="about">
-      <p class="section-index">04 / WHY BIZORA</p>
-      <div class="about-content">
-        <h2>Technology should work <span>for your business.</span></h2>
-        <div class="about-aside"><p>Local businesses deserve digital tools that are useful, understandable and accessible. Bizora is being built around that idea: fewer complications, clearer choices and practical ways to move forward.</p><a class="text-link" href="./register.html">Start with your business <span aria-hidden="true">↗</span></a></div>
-      </div>
-    </section>
+                    <h1>
+                        Your business.<br>
+                        <span>Ready for more.</span>
+                    </h1>
 
-    <section class="final-cta">
-      <div class="section-shell final-cta-inner">
-        <div><p class="cta-eyebrow">YOUR NEXT STEP STARTS HERE</p><h2>Bring your business<br>into the digital world.</h2></div>
-        <a class="button button-light" href="./register.html">Get started with Bizora <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-  </main>
+                    <p class="hero-description">
+                        Bring your business online with a place to showcase
+                        your products, share your details and build customer
+                        confidence — without unnecessary complexity.
+                    </p>
 
-  <footer class="site-footer">
-    <div class="section-shell">
-      <div class="footer-main">
-        <a class="brand footer-brand" href="#home" aria-label="Bizora home"><span class="brand-mark">b.</span><span class="brand-name">bizora</span></a>
-        <p>Practical digital tools for growing businesses.</p>
-        <nav class="footer-links" aria-label="Footer navigation"><a href="#platform">Platform</a><a href="#approach">How it works</a><a href="#about">About</a><a href="./login.html">Sign in</a></nav>
-      </div>
-      <div class="footer-bottom"><span>© <span id="current-year">2026</span> Bizora</span><a href="#home">Back to top ↑</a></div>
-    </div>
-  </footer>
+                    <div class="hero-actions">
+                        <a href="./register.html" class="button button-primary">
+                            Build your business
+                            <span class="arrow" aria-hidden="true">↗</span>
+                        </a>
+
+                        <a href="#platform" class="button button-outline">
+                            Explore Bizora
+                            <span class="arrow" aria-hidden="true">↓</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-proof">
+                        <span class="proof-symbol" aria-hidden="true">✓</span>
+                        <span>Designed for small and growing businesses</span>
+                    </div>
+
+                </div>
+
+
+                <!-- BUSINESS WEBSITE + PHONE PREVIEW -->
+
+                <div class="hero-visual" aria-label="Preview of a business website on desktop and mobile">
+
+                    <div class="visual-glow" aria-hidden="true"></div>
+
+                    <!-- DESKTOP BROWSER -->
+
+                    <div class="browser-window">
+
+                        <div class="browser-bar">
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+
+                            <div class="browser-address">
+                                bizora.in/your-business
+                            </div>
+                        </div>
+
+                        <div class="storefront">
+
+                            <aside class="store-sidebar">
+
+                                <div class="store-brand">
+                                    <span class="mini-brand">b.</span>
+                                    <span>bizora</span>
+                                </div>
+
+                                <div class="side-link active">
+                                    <span aria-hidden="true">⌂</span>
+                                    Home
+                                </div>
+
+                                <div class="side-link">
+                                    <span aria-hidden="true">▤</span>
+                                    Catalogue
+                                </div>
+
+                                <div class="side-link">
+                                    <span aria-hidden="true">▧</span>
+                                    Orders
+                                </div>
+
+                                <div class="side-link">
+                                    <span aria-hidden="true">₹</span>
+                                    Payments
+                                </div>
+
+                                <div class="side-link">
+                                    <span aria-hidden="true">♙</span>
+                                    Business profile
+                                </div>
+
+                            </aside>
+
+
+                            <div class="store-content">
+
+                                <div class="store-cover">
+
+                                    <div class="store-cover-copy">
+
+                                        <h3>Sunrise Essentials</h3>
+
+                                        <p>
+                                            Thoughtfully chosen products
+                                            for a more beautiful home.
+                                        </p>
+
+                                        <span class="store-tag">
+                                            Explore our collection
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="store-stats">
+
+                                    <div class="store-stat">
+                                        <small>Catalogue</small>
+                                        <strong>Products</strong>
+                                    </div>
+
+                                    <div class="store-stat">
+                                        <small>Business</small>
+                                        <strong>Online</strong>
+                                    </div>
+
+                                    <div class="store-stat">
+                                        <small>Access</small>
+                                        <strong>Shareable</strong>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="products-heading">
+                                    <strong>Featured products</strong>
+                                    <span>View catalogue ↗</span>
+                                </div>
+
+
+                                <div class="product-grid">
+
+                                    <article class="product-item">
+                                        <div class="product-photo">
+                                            <img
+                                                src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=400&q=80"
+                                                alt="Ceramic coffee mug"
+                                                loading="lazy"
+                                            >
+                                        </div>
+
+                                        <strong>Ceramic Mug</strong>
+                                        <small>₹499</small>
+                                    </article>
+
+
+                                    <article class="product-item">
+                                        <div class="product-photo">
+                                            <img
+                                                src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=400&q=80"
+                                                alt="Indoor potted plant"
+                                                loading="lazy"
+                                            >
+                                        </div>
+
+                                        <strong>Indoor Planter</strong>
+                                        <small>₹749</small>
+                                    </article>
+
+
+                                    <article class="product-item">
+                                        <div class="product-photo">
+                                            <img
+                                                src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=400&q=80"
+                                                alt="Decorative table lamp"
+                                                loading="lazy"
+                                            >
+                                        </div>
+
+                                        <strong>Table Lamp</strong>
+                                        <small>₹1,299</small>
+                                    </article>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MOBILE BUSINESS WEBSITE -->
+
+                    <div class="phone">
+
+                        <div class="phone-screen">
+
+                            <div class="phone-status">
+                                <span>9:41</span>
+                                <span>● ● ●</span>
+                            </div>
+
+                            <div class="phone-notch" aria-hidden="true"></div>
+
+                            <div class="phone-inner">
+
+                                <div class="phone-brand">
+                                    <span class="mini-brand">b.</span>
+                                    <span>bizora</span>
+                                </div>
+
+                                <div class="phone-title">
+                                    Sunrise Essentials
+                                </div>
+
+                                <p class="phone-subtitle">
+                                    Home decor &amp; lifestyle
+                                </p>
+
+                                <div class="phone-cover">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=500&q=80"
+                                        alt="Home decor displayed in a modern room"
+                                        loading="lazy"
+                                    >
+                                </div>
+
+                                <div class="phone-share">
+                                    Share business link ↗
+                                </div>
+
+                                <div class="phone-products">
+                                    Our collection
+                                </div>
+
+                                <div class="phone-product-row">
+
+                                    <div>
+                                        <img
+                                            src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=250&q=75"
+                                            alt="Ceramic mug"
+                                            loading="lazy"
+                                        >
+                                        <p class="phone-caption">Ceramic Mug</p>
+                                    </div>
+
+                                    <div>
+                                        <img
+                                            src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=250&q=75"
+                                            alt="Indoor planter"
+                                            loading="lazy"
+                                        >
+                                        <p class="phone-caption">Indoor Planter</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="phone-bottom">
+                                <span>Home</span>
+                                <span>Catalogue</span>
+                                <span>Contact</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="handwritten-note" aria-hidden="true">
+                        Your business,<br>
+                        online.
+                    </div>
+
+                    <span class="note-arrow" aria-hidden="true">↙</span>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- BENEFITS -->
+
+        <section class="benefits" aria-label="What Bizora helps with">
+
+            <div class="container benefit-grid">
+
+                <article class="benefit">
+
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <path d="M4 13L16 4L28 13V27H4V13Z"
+                                  stroke="currentColor" stroke-width="2"
+                                  stroke-linejoin="round"/>
+                            <path d="M11 27V18H21V27"
+                                  stroke="currentColor" stroke-width="2"/>
+                            <path d="M3 13H29"
+                                  stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h3>Be easier to discover</h3>
+                        <p>Give customers a place to find your business.</p>
+                    </div>
+
+                </article>
+
+
+                <article class="benefit">
+
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <path d="M16 3L27 7V15C27 22 22 27 16 29C10 27 5 22 5 15V7L16 3Z"
+                                  stroke="currentColor" stroke-width="2"
+                                  stroke-linejoin="round"/>
+                            <path d="M11 16L14.5 19.5L21.5 12.5"
+                                  stroke="currentColor" stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h3>Build safer habits</h3>
+                        <p>Learn practical ways to protect digital payments.</p>
+                    </div>
+
+                </article>
+
+
+                <article class="benefit">
+
+                    <div class="benefit-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32" fill="none">
+                            <path d="M4 24L12 16L18 20L28 7"
+                                  stroke="currentColor" stroke-width="2.2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M20 7H28V15"
+                                  stroke="currentColor" stroke-width="2.2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h3>Take the next step</h3>
+                        <p>Find useful ways to improve your online presence.</p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PLATFORM -->
+
+        <section class="section platform" id="platform">
+
+            <div class="container platform-layout">
+
+                <div class="platform-copy">
+
+                    <span class="eyebrow">The Bizora platform</span>
+
+                    <h2>
+                        Your business,<br>
+                        in one place.
+                    </h2>
+
+                    <p class="section-copy">
+                        You do not need a complicated system to start building
+                        your digital presence. Begin with the essentials and
+                        develop your business at your own pace.
+                    </p>
+
+                    <a href="./register.html" class="text-link">
+                        Get started with Bizora
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                </div>
+
+
+                <div class="platform-visual">
+
+                    <div class="platform-feature">
+
+                        <div class="platform-feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 32 32" fill="none">
+                                <rect x="5" y="4" width="22" height="24"
+                                      rx="3" stroke="currentColor"
+                                      stroke-width="2"/>
+                                <path d="M10 10H13M17 10H22M10 16H13M17 16H22M10 22H13M17 22H22"
+                                      stroke="currentColor"
+                                      stroke-width="2"
+                                      stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <h3>Product catalogue</h3>
+                            <p>
+                                Present your products or services with clear
+                                details in one shareable destination.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="catalogue-preview">
+
+                        <div class="catalogue-top">
+                            <span>Sunrise Essentials</span>
+                            <span>Business catalogue</span>
+                        </div>
+
+                        <div class="catalogue-row">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=250&q=80"
+                                alt="Ceramic mug product"
+                                loading="lazy"
+                            >
+
+                            <div class="catalogue-details">
+                                <strong>Ceramic Mug</strong>
+                                <span>Everyday essentials</span>
+                                <b>₹499</b>
+                            </div>
+
+                        </div>
+
+                        <div class="catalogue-row">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=250&q=80"
+                                                           alt="Potted plant product"
+                                loading="lazy"
+                            >
+
+                            <div class="catalogue-details">
+                                <strong>Indoor Planter</strong>
+                                <span>Home &amp; living</span>
+                                <b>₹749</b>
+                            </div>
+
+                        </div>
+
+                        <div class="catalogue-row">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=250&q=80"
+                                alt="Decorative table lamp"
+                                loading="lazy"
+                            >
+
+                            <div class="catalogue-details">
+                                <strong>Table Lamp</strong>
+                                <span>Home accessories</span>
+                                <b>₹1,299</b>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="platform-caption">
+                        <span class="caption-dot"></span>
+                        A sample storefront preview
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUSINESS PRESENCE -->
+
+            <div class="container presence-section">
+
+                <div class="presence-heading">
+                    <span class="eyebrow">A better starting point</span>
+
+                    <h2>
+                        Make it easier<br>
+                        to do business.
+                    </h2>
+                </div>
+
+
+                <div class="presence-content">
+
+                    <article class="presence-item">
+                        <span class="presence-number">01</span>
+
+                        <div>
+                            <h3>One link to share</h3>
+                            <p>
+                                Give customers a simple destination for your
+                                business information and catalogue.
+                            </p>
+                        </div>
+
+                        <span class="presence-symbol" aria-hidden="true">↗</span>
+                    </article>
+
+
+                    <article class="presence-item">
+                        <span class="presence-number">02</span>
+
+                        <div>
+                            <h3>Information that matters</h3>
+                            <p>
+                                Present your business details and offerings
+                                without overwhelming visitors.
+                            </p>
+                        </div>
+
+                        <span class="presence-symbol" aria-hidden="true">↗</span>
+                    </article>
+
+
+                    <article class="presence-item">
+                        <span class="presence-number">03</span>
+
+                        <div>
+                            <h3>Room to grow</h3>
+                            <p>
+                                Start with the basics and identify the next
+                                useful digital steps for your business.
+                            </p>
+                        </div>
+
+                        <span class="presence-symbol" aria-hidden="true">↗</span>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PAYMENT SAFETY -->
+
+        <section class="safety-section" id="safety">
+
+            <div class="container safety-layout">
+
+                <div class="safety-copy">
+
+                    <span class="eyebrow">Digital payment awareness</span>
+
+                    <h2>
+                        Confidence starts<br>
+                        with safer habits.
+                    </h2>
+
+                    <p class="section-copy">
+                        Digital payments make business convenient, but
+                        checking every transaction carefully matters.
+                        Build habits that help you recognise common risks.
+                    </p>
+
+                    <a href="#how-it-works" class="safety-link">
+                        See how Bizora helps
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                </div>
+
+
+                <div class="safety-content">
+
+                    <div class="safety-emblem" aria-hidden="true">
+                        <svg viewBox="0 0 100 100" fill="none">
+                            <path d="M50 8L83 21V46C83 66 69 82 50 92C31 82 17 66 17 46V21L50 8Z"
+                                  stroke="currentColor" stroke-width="3"
+                                  stroke-linejoin="round"/>
+                            <path d="M34 49L45 60L67 37"
+                                  stroke="currentColor" stroke-width="4"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                    <div class="safety-rule">
+                        <span class="rule-number">01</span>
+                        <div>
+                            <h3>Check your payment app</h3>
+                            <p>Confirm the transaction in your own account.</p>
+                        </div>
+                    </div>
+
+                    <div class="safety-rule">
+                        <span class="rule-number">02</span>
+                        <div>
+                            <h3>Never share your UPI PIN</h3>
+                            <p>A PIN should remain private and secure.</p>
+                        </div>
+                    </div>
+
+                    <div class="safety-rule">
+                        <span class="rule-number">03</span>
+                        <div>
+                            <h3>Do not rely on screenshots</h3>
+                            <p>Verify the actual transaction before acting.</p>
+                        </div>
+                    </div>
+
+                    <p class="safety-disclaimer">
+                        General digital payment safety guidance.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW IT WORKS -->
+
+        <section class="section process-section" id="how-it-works">
+
+            <div class="container">
+
+                <div class="process-heading">
+
+                    <div>
+                        <span class="eyebrow">Getting started</span>
+
+                        <h2>
+                            Start simple.<br>
+                            Build from there.
+                        </h2>
+                    </div>
+
+                    <p class="section-copy">
+                        Bizora is designed to help you focus on what your
+                        business needs now, with the flexibility to grow later.
+                    </p>
+
+                </div>
+
+
+                <div class="process-grid">
+
+                    <article class="process-step">
+                        <span class="process-number">01</span>
+
+                        <h3>Set up your profile</h3>
+
+                        <p>
+                            Add your business information and tell us which
+                            digital tools you already use.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+                        <span class="process-number">02</span>
+
+                        <h3>Build your presence</h3>
+
+                        <p>
+                            Organise your catalogue and create a simple
+                            online destination for your business.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+                        <span class="process-number">03</span>
+
+                        <h3>Choose your next step</h3>
+
+                        <p>
+                            Explore practical ways to improve visibility,
+                            communication and digital safety.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="about-section" id="about">
+
+            <div class="container about-layout">
+
+                <div class="about-brand">
+                    <span class="about-brand-mark">b.</span>
+                    <span>Built for business.</span>
+                </div>
+
+                <div class="about-copy">
+
+                    <span class="eyebrow">Why Bizora</span>
+
+                    <h2>
+                        Digital tools should<br>
+                        make business simpler.
+                    </h2>
+
+                    <p>
+                        Every business deserves a practical way to build
+                        its online presence. Bizora brings useful digital
+                        essentials into a straightforward experience, so
+                        business owners can spend less time figuring out
+                        tools and more time serving customers.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL CALL TO ACTION -->
+
+        <section class="final-cta">
+
+            <div class="container final-cta-inner">
+
+                <div>
+                    <span class="cta-eyebrow">Your next step starts here</span>
+
+                    <h2>
+                        Bring your business<br>
+                        into the digital world.
+                    </h2>
+
+                    <p>
+                        Start with the essentials. Grow at your own pace.
+                    </p>
+                </div>
+
+                <a href="./register.html" class="button cta-button">
+                    Get started with Bizora
+                    <span class="arrow" aria-hidden="true">↗</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand-column">
+
+                    <a href="#home" class="brand footer-brand">
+                        <span class="brand-mark">b.</span>
+                        <span class="brand-name">bizora</span>
+                    </a>
+
+                    <p class="footer-description">
+                        A simpler digital starting point for small
+                        and growing businesses.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <a href="#platform">Platform</a>
+                    <a href="#how-it-works">How it works</a>
+                    <a href="#safety">Payment safety</a>
+                </div>
+
+
+                <div class="footer-column">
+                    <h3>Your business</h3>
+                    <a href="./register.html">Get started</a>
+                    <a href="./login.html">Sign in</a>
+                    <a href="#about">About Bizora</a>
+                </div>
+
+
+                <div class="footer-note">
+                    <span class="footer-note-label">OUR APPROACH</span>
+
+                    <p>
+                        Practical tools.<br>
+                        Clear information.<br>
+                        Simpler digital business.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; <span id="current-year">2026</span> Bizora.
+                    All rights reserved.
+                </p>
+
+                <a href="#home" class="back-to-top">
+                    Back to top ↑
+                </a>
+
+            </div>
+</div>
+
+    </footer>
+
 </body>
 </html>
+
+                    
