@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#123047">
+
+    <meta
+        name="description"
+        content="Sign in to your Bizora account to manage your online business presence."
+    >
+
+    <title>Sign In | Bizora</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Existing Bizora styles -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./auth.css">
+
+    <!-- Scripts must load in this order -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+        defer
+    ></script>
+
+    <script src="./supabase.js" defer></script>
+    <script src="./script.js" defer></script>
+    <script src="./login.js" defer></script>
+</head>
+
+<body class="auth-page">
+
+    <!-- Header -->
+    <header class="auth-header">
+        <div class="auth-header-inner">
+
+            <a
+                href="./index.html"
+                class="brand"
+                aria-label="Bizora home"
+            >
+                <span class="brand-mark">B</span>
+                <span class="brand-name">Bizora</span>
+            </a>
+
+            <p class="auth-header-text">
+                New to Bizora?
+                <a href="./register.html">Create an account</a>
+            </p>
+
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="auth-main">
+
+        <!-- Introduction -->
+        <section class="auth-intro">
+
+            <span class="auth-eyebrow">
+                YOUR BUSINESS, YOUR NEXT STEP
+            </span>
+
+            <h1>
+                Welcome back.
+                <span>Let's grow your business.</span>
+            </h1>
+
+            <p class="auth-description">
+                Sign in to manage your business profile, keep your
+                catalogue up to date, and share your business online.
+            </p>
+
+            <div class="auth-benefits">
+
+                <div class="auth-benefit">
+                    <span class="benefit-check" aria-hidden="true">✓</span>
+
+                    <div>
+                        <h2>Your business, organised</h2>
+                        <p>Manage your business details in one place.</p>
+                    </div>
+                </div>
+
+                <div class="auth-benefit">
+                    <span class="benefit-check" aria-hidden="true">✓</span>
+
+                    <div>
+                        <h2>Your catalogue, up to date</h2>
+                        <p>Keep your products or services organised.</p>
+                    </div>
+                </div>
+
+                <div class="auth-benefit">
+                    <span class="benefit-check" aria-hidden="true">✓</span>
+
+                    <div>
+                        <h2>Your online presence</h2>
+                        <p>Make it easier for customers to discover your shop.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="auth-tagline">
+                <span class="auth-tagline-line"></span>
+                Your shop offline. Your presence online.
+            </div>
+
+        </section>
+
+        <!-- Login card -->
+        <section class="auth-card" aria-labelledby="login-title">
+
+            <div class="auth-card-heading">
+
+                <div class="auth-step-label">
+                    <span class="auth-step-dot"></span>
+                    ACCOUNT SIGN IN
+                </div>
+
+                <h2 id="login-title">Sign in to Bizora</h2>
+
+                <p>
+                    Enter your account details to continue.
+                </p>
+
+            </div>
+
+            <form id="login-form" novalidate>
+
+                <!-- Email -->
+                <div class="form-field">
+                    <label for="login-email">Email address</label>
+
+                    <input
+                        type="email"
+                        id="login-email"
+                        name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        maxlength="254"
+                        required
+                    >
+                </div>
+
+                <!-- Password -->
+                <div class="form-field">
+
+                    <div class="form-label-row">
+                        <label for="login-password">Password</label>
+
+                        <a
+                            href="./forgot-password.html"
+                            class="form-inline-link"
+                        >
+                            Forgot password?
+                        </a>
+                    </div>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="login-password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            maxlength="128"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-password-target="login-password"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Feedback -->
+                <p
+                    class="form-message"
+                    id="login-message"
+                    role="status"
+                    aria-live="polite"
+                    hidden
+                ></p>
+
+                <!-- Submit -->
+                <button
+                    type="submit"
+                    class="button button-primary auth-submit"
+                    id="login-submit"
+                >
+                    <span>Sign in</span>
+                    <span aria-hidden="true">→</span>
+                </button>
+
+                <!-- Registration link -->
+                <p class="auth-redirect">
+                    Don't have an account?
+                    <a href="./register.html">Create one</a>
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="auth-footer">
+        <p>
+            © <span id="current-year">2026</span> Bizora.
+            Helping businesses build their online presence.
+        </p>
+
+        <a href="./index.html">Back to home</a>
+    </footer>
+
+</body>
+</html>
