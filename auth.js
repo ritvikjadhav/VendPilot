@@ -19,6 +19,7 @@ function initPasswordToggles() {
 
             input.type = showPassword ? "text" : "password";
             button.textContent = showPassword ? "Hide" : "Show";
+
             button.setAttribute("aria-pressed", String(showPassword));
             button.setAttribute(
                 "aria-label",
@@ -42,21 +43,36 @@ function initRegistrationForm() {
     const submitButton = document.getElementById("register-submit");
     const message = document.getElementById("register-message");
 
-    const showMessage = (text, type = "error") => {
+    if (
+        !fullName ||
+        !email ||
+        !password ||
+        !confirmPassword ||
+        !acceptTerms ||
+        !submitButton ||
+        !message
+    ) {
+        console.error("Bizora: Required registration elements are missing.");
+        return;
+    }
+
+    const buttonLabel = submitButton.querySelector("span");
+
+    function showMessage(text, type = "error") {
         message.textContent = text;
         message.className = `form-message is-${type}`;
         message.hidden = false;
-    };
+    }
 
-    const clearMessage = () => {
+    function clearMessage() {
         message.textContent = "";
-        message.hidden = true;
         message.className = "form-message";
-    };
+        message.hidden = true;
+    }
 
-    const setInvalid = (field, invalid) => {
+    function setInvalid(field, invalid) {
         field.setAttribute("aria-invalid", String(invalid));
-    };
+    }
 
     form.addEventListener("input", clearMessage);
 
@@ -64,13 +80,20 @@ function initRegistrationForm() {
         event.preventDefault();
         clearMessage();
 
-        [fullName, email, password, confirmPassword].forEach((field) => {
-            setInvalid(field, false);
-        });
+        const fields = [
+            fullName,
+            email,
+            password,
+            confirmPassword
+        ];
+
+        fields.forEach((field) => setInvalid(field, false));
 
         const name = fullName.value.trim();
         const emailAddress = email.value.trim();
+        const userPassword = password.value;
 
+        /* Validate full name */
         if (name.length < 2) {
             setInvalid(fullName, true);
             showMessage("Please enter your full name.");
@@ -78,6 +101,7 @@ function initRegistrationForm() {
             return;
         }
 
+        /* Validate email */
         if (!email.validity.valid || !emailAddress) {
             setInvalid(email, true);
             showMessage("Please enter a valid email address.");
@@ -85,70 +109,118 @@ function initRegistrationForm() {
             return;
         }
 
-        if (password.value.length < 8) {
+        /* Validate password */
+        if (userPassword.length < 8) {
             setInvalid(password, true);
             showMessage("Your password must contain at least 8 characters.");
             password.focus();
             return;
         }
 
-        if (password.value !== confirmPassword.value) {
+        /* Confirm password */
+        if (userPassword !== confirmPassword.value) {
             setInvalid(confirmPassword, true);
             showMessage("Your passwords don't match.");
             confirmPassword.focus();
             return;
         }
 
+        /* Terms acceptance */
         if (!acceptTerms.checked) {
-            showMessage("Please agree to the Terms of Service and Privacy Policy.");
+            showMessage(
+                "Please agree to the Terms of Service and Privacy Policy."
+            );
             acceptTerms.focus();
             return;
         }
 
-        /*
-         * Supabase is not connected yet.
-         * Do not pretend an account has been created.
-         */
-        if (!window.bizoraAuth?.signUp) {
+        /* Check Supabase connection */
+        const client = window.bizoraSupabase;
+
+        if (!client?.auth) {
             showMessage(
-                "The registration service isn't connected yet. Configure Supabase to create your account."
+                "Unable to connect to registration. Refresh the page and try again."
             );
+
+            console.error(
+                "Bizora: Supabase client not found. Check script loading and supabase.js."
+            );
+
             return;
         }
 
+        /* Prevent duplicate submissions */
         submitButton.disabled = true;
-        submitButton.querySelector("span").textContent = "Creating account…";
+
+        if (buttonLabel) {
+            buttonLabel.textContent = "Creating account…";
+        }
 
         try {
-            const result = await window.bizoraAuth.signUp({
-                name,
+            const { data, error } = await client.auth.signUp({
                 email: emailAddress,
-                password: password.value
+                password: userPassword,
+                options: {
+                    data: {
+                        full_name: name
+                    },
+                    emailRedirectTo:
+                        `${window.location.origin}/login.html`
+                }
             });
 
-            if (result.error) {
-                showMessage(result.error);
+            if (error) {
+                console.error("Bizora registration error:", error);
+
+                showMessage(
+                    error.message || "Registration failed. Please try again."
+                );
+
                 return;
             }
 
-            if (result.requiresEmailConfirmation) {
+            /*
+             * When email confirmation is enabled, Supabase
+             * normally returns a user without an active session.
+             */
+            if (data.user && !data.session) {
                 showMessage(
-                    "Your account request was received. Check your email to confirm your account before signing in.",
+                    "Your account request was received. Check your email for a confirmation link before signing in.",
                     "success"
                 );
+
                 form.reset();
+
                 return;
             }
 
-            window.location.assign("./create-business.html");
-        } catch {
+            /*
+             * If Supabase returns an authenticated session,
+             * continue to the business setup page.
+             */
+            if (data.session) {
+                window.location.assign("./create-business.html");
+                return;
+            }
+
             showMessage(
-                "We couldn't complete registration. Please try again."
+                "Registration was submitted. Check your email for further instructions.",
+                "success"
             );
+
+        } catch (error) {
+            console.error("Bizora registration error:", error);
+
+            showMessage(
+                "We couldn't complete registration. Check your connection and try again."
+            );
+
         } finally {
             submitButton.disabled = false;
-            submitButton.querySelector("span").textContent = "Create account";
+
+            if (buttonLabel) {
+                buttonLabel.textContent = "Create account";
+            }
         }
     });
 }
-);
