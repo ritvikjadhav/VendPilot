@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#102d46">
 
-    <meta name="theme-color" content="#f7faff">
-    <meta name="description" content="Bizora helps small and growing businesses build an online presence, showcase products, and reach more customers.">
+    <meta
+        name="description"
+        content="Create your business profile, showcase your products, and share your shop online with Bizora."
+    >
 
-    <title>Bizora — Your business. Ready for more.</title>
+    <title>Bizora — Your Business, Ready for More</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
@@ -20,11 +26,11 @@
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- HEADER -->
     <header class="site-header">
         <div class="container header-inner">
 
-            <a href="#home" class="brand" aria-label="Bizora homepage">
+            <a href="#home" class="brand" aria-label="Bizora home">
                 <span class="brand-mark">B</span>
                 <span class="brand-name">Bizora</span>
             </a>
@@ -42,18 +48,32 @@
                 <span></span>
             </button>
 
-            <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+            <nav
+                class="nav-links"
+                id="primary-navigation"
+                aria-label="Main navigation"
+            >
                 <a href="#platform">Platform</a>
-                <a href="#how-it-works">How it works</a>
-                <a href="#about">About</a>
+                <a href="#business-page">My Business</a>
+                <a href="#catalogue">Catalogue</a>
+                <a href="#grow-online">Grow Online</a>
+
+                <a href="./login.html" class="mobile-sign-in">
+                    Sign in
+                </a>
             </nav>
 
             <div class="header-actions">
-                <a href="./login.html" class="sign-in">Sign in</a>
+                <a href="./login.html" class="sign-in desktop-sign-in">
+                    Sign in
+                </a>
 
-                <a href="./register.html" class="button button-primary header-cta">
+                <a
+                    href="./register.html"
+                    class="button button-primary header-cta"
+                >
                     Get started
-                    <span aria-hidden="true">↗</span>
+                    <span aria-hidden="true">→</span>
                 </a>
             </div>
 
@@ -63,16 +83,11 @@
 
     <main>
 
-        <!-- ================= HERO ================= -->
+        <!-- HERO -->
         <section class="hero" id="home">
             <div class="container hero-grid">
 
                 <div class="hero-copy">
-
-                    <div class="hero-label">
-                        <span class="label-dot"></span>
-                        A simpler way to go digital
-                    </div>
 
                     <h1>
                         Your business.<br>
@@ -80,14 +95,19 @@
                     </h1>
 
                     <p class="hero-description">
-                        Give your local business an online presence.
-                        Showcase your products, share your shop, and
-                        help more customers discover what you offer.
+                        Take your local business online.
+                        Showcase your products, share your shop
+                        with one link, and make it easier for
+                        customers to discover what you offer.
                     </p>
 
                     <div class="hero-actions">
-                        <a href="./register.html" class="button button-primary hero-primary">
-                            Build your business
+
+                        <a
+                            href="./register.html"
+                            class="button button-primary hero-primary"
+                        >
+                            Create your business page
                             <span aria-hidden="true">→</span>
                         </a>
 
@@ -95,23 +115,24 @@
                             Explore Bizora
                             <span aria-hidden="true">↓</span>
                         </a>
+
                     </div>
 
                     <div class="hero-note">
                         <span class="note-check" aria-hidden="true">✓</span>
-                        <span>Made for small and growing businesses</span>
+                        <span>Built for local shops and growing businesses</span>
                     </div>
 
                 </div>
 
 
-                <!-- Replace this image with your final Bizora hero artwork -->
+                <!-- PRODUCT VISUAL -->
                 <div class="hero-visual">
 
                     <div class="hero-image-frame">
                         <img
                             src="./assets/bizora-hero.png"
-                            alt="Illustration of a Bizora business page displayed on a laptop and smartphone"
+                            alt="Concept illustration of a business storefront displayed on a laptop and smartphone"
                             class="hero-image"
                             fetchpriority="high"
                         >
@@ -119,7 +140,7 @@
 
                     <div class="hero-image-caption">
                         <span class="caption-dot"></span>
-                        One business. One shareable page.
+                        Your shop, ready to share
                     </div>
 
                 </div>
@@ -128,31 +149,34 @@
         </section>
 
 
-        <!-- ================= VALUE STRIP ================= -->
+        <!-- CORE VALUE -->
         <section class="value-strip" aria-label="Bizora benefits">
             <div class="container value-grid">
 
                 <article class="value-item">
                     <span class="value-number">01</span>
+
                     <div>
-                        <h3>Get discovered</h3>
-                        <p>Give customers a place to find your business.</p>
+                        <h3>Your business profile</h3>
+                        <p>Bring your essential business details together.</p>
                     </div>
                 </article>
 
                 <article class="value-item">
                     <span class="value-number">02</span>
+
                     <div>
-                        <h3>Show what you offer</h3>
-                        <p>Present your products and services clearly.</p>
+                        <h3>Your product catalogue</h3>
+                        <p>Show customers what you sell or offer.</p>
                     </div>
                 </article>
 
                 <article class="value-item">
                     <span class="value-number">03</span>
+
                     <div>
-                        <h3>Share anywhere</h3>
-                        <p>Use one business link across your channels.</p>
+                        <h3>One shareable link</h3>
+                        <p>Share your business page wherever you connect.</p>
                     </div>
                 </article>
 
@@ -160,7 +184,7 @@
         </section>
 
 
-        <!-- ================= PLATFORM ================= -->
+        <!-- PLATFORM OVERVIEW -->
         <section class="section platform-section" id="platform">
             <div class="container platform-layout">
 
@@ -169,18 +193,18 @@
                     <span class="eyebrow">THE BIZORA PLATFORM</span>
 
                     <h2>
-                        Your business,<br>
-                        ready for the digital world.
+                        Your shop offline.<br>
+                        Your presence online.
                     </h2>
 
                     <p class="section-description">
-                        Start with what your business needs today.
-                        Build your online presence step by step,
-                        without the complexity of a large e-commerce system.
+                        You already have a business.
+                        Bizora helps you create a digital place
+                        for customers to discover it.
                     </p>
 
                     <a href="./register.html" class="text-link section-link">
-                        Get started with Bizora
+                        Get started
                         <span aria-hidden="true">→</span>
                     </a>
 
@@ -189,14 +213,16 @@
 
                 <div class="platform-features">
 
-                    <article class="platform-feature">
+                    <article class="platform-feature" id="business-profile">
                         <span class="feature-index">01</span>
 
                         <div class="feature-content">
-                            <h3>Your business profile</h3>
+                            <h3>Your business information</h3>
+
                             <p>
-                                Add your business name, contact details,
-                                opening hours, location, and description.
+                                Add your shop name, description,
+                                contact details, opening hours,
+                                and location.
                             </p>
                         </div>
 
@@ -204,14 +230,15 @@
                     </article>
 
 
-                    <article class="platform-feature">
+                    <article class="platform-feature" id="catalogue">
                         <span class="feature-index">02</span>
 
                         <div class="feature-content">
-                            <h3>Your product catalogue</h3>
+                            <h3>Products and services</h3>
+
                             <p>
-                                Showcase products or services with photos,
-                                prices, and useful details.
+                                Build a visual catalogue with
+                                product photos, prices, and descriptions.
                             </p>
                         </div>
 
@@ -219,14 +246,16 @@
                     </article>
 
 
-                    <article class="platform-feature">
+                    <article class="platform-feature" id="business-page">
                         <span class="feature-index">03</span>
 
                         <div class="feature-content">
                             <h3>Your public business page</h3>
+
                             <p>
-                                Publish one page that customers can open
-                                and view from their phones or computers.
+                                Bring your business details and
+                                catalogue together in a page customers
+                                can open on their phones or computers.
                             </p>
                         </div>
 
@@ -234,14 +263,16 @@
                     </article>
 
 
-                    <article class="platform-feature">
+                    <article class="platform-feature" id="share-link">
                         <span class="feature-index">04</span>
 
                         <div class="feature-content">
-                            <h3>Your shareable business link</h3>
+                            <h3>One link to share</h3>
+
                             <p>
-                                Share your page through WhatsApp,
-                                Instagram, QR codes, or anywhere else.
+                                Share your published business page
+                                through WhatsApp, Instagram, QR codes,
+                                or any other channel.
                             </p>
                         </div>
 
@@ -254,28 +285,30 @@
         </section>
 
 
-        <!-- ================= ONLINE PRESENCE ================= -->
+        <!-- PUBLIC BUSINESS PAGE -->
         <section class="presence-section">
             <div class="container presence-layout">
 
                 <div class="presence-copy">
-                    <span class="eyebrow">YOUR DIGITAL PRESENCE</span>
+
+                    <span class="eyebrow">YOUR ONLINE PRESENCE</span>
 
                     <h2>
-                        One link.<br>
-                        More ways to connect.
+                        One business.<br>
+                        One place to discover it.
                     </h2>
 
                     <p>
-                        Give customers one convenient place to explore
-                        your business, discover your offerings, and
-                        find ways to contact you.
+                        Give customers a convenient place to
+                        explore your products, learn about your
+                        business, find your location, and contact you.
                     </p>
 
                     <a href="./register.html" class="button button-dark">
-                        Create your business page
+                        Build your business page
                         <span aria-hidden="true">→</span>
                     </a>
+
                 </div>
 
 
@@ -283,25 +316,28 @@
 
                     <div class="presence-step">
                         <span class="step-marker">01</span>
+
                         <div>
-                            <h3>Set up your shop</h3>
-                            <p>Add the details customers need to know.</p>
+                            <h3>Create your profile</h3>
+                            <p>Tell customers about your business.</p>
                         </div>
                     </div>
 
                     <div class="presence-step">
                         <span class="step-marker">02</span>
+
                         <div>
-                            <h3>Publish your page</h3>
-                            <p>Give your business its own public link.</p>
+                            <h3>Add your products</h3>
+                            <p>Show what you sell or the services you provide.</p>
                         </div>
                     </div>
 
                     <div class="presence-step">
                         <span class="step-marker">03</span>
+
                         <div>
-                            <h3>Share it everywhere</h3>
-                            <p>Let customers discover your business online.</p>
+                            <h3>Publish and share</h3>
+                            <p>Give customers one link to find your business.</p>
                         </div>
                     </div>
 
@@ -311,48 +347,62 @@
         </section>
 
 
-        <!-- ================= HOW IT WORKS ================= -->
-        <section class="section process-section" id="how-it-works">
+        <!-- GROW ONLINE -->
+        <section class="section process-section" id="grow-online">
             <div class="container">
 
                 <div class="process-heading">
-                    <span class="eyebrow">SIMPLE BY DESIGN</span>
 
-                    <h2>From local shop to online presence.</h2>
+                    <span class="eyebrow">GROW ONLINE</span>
+
+                    <h2>
+                        Take the next step<br>
+                        for your business.
+                    </h2>
 
                     <p>
-                        Get started with the essentials.
-                        Add more details whenever your business is ready.
+                        Build your digital presence gradually
+                        and discover practical ways to help
+                        more people find your business.
                     </p>
+
                 </div>
 
 
                 <div class="process-grid">
 
                     <article class="process-step">
-                        <span class="process-number">01 / SET UP</span>
-                        <h3>Tell us about your business</h3>
+                        <span class="process-number">01 / PRESENCE</span>
+
+                        <h3>Be easier to find</h3>
+
                         <p>
-                            Create an account and add your business
-                            information.
+                            Create a dedicated page with your
+                            business information and contact details.
                         </p>
                     </article>
 
+
                     <article class="process-step">
-                        <span class="process-number">02 / BUILD</span>
-                        <h3>Make it yours</h3>
+                        <span class="process-number">02 / VISIBILITY</span>
+
+                        <h3>Share your business</h3>
+
                         <p>
-                            Add your branding, products, services,
-                            and contact information.
+                            Use your business link across messaging
+                            apps, social platforms, and QR codes.
                         </p>
                     </article>
 
+
                     <article class="process-step">
-                        <span class="process-number">03 / SHARE</span>
-                        <h3>Put your business out there</h3>
+                        <span class="process-number">03 / NEXT STEPS</span>
+
+                        <h3>Keep improving</h3>
+
                         <p>
-                            Publish your page and share its link
-                            with your customers.
+                            Get practical suggestions for improving
+                            your business's online presence.
                         </p>
                     </article>
 
@@ -362,43 +412,20 @@
         </section>
 
 
-        <!-- ================= ABOUT ================= -->
-        <section class="about-section" id="about">
-            <div class="container about-layout">
-
-                <div class="about-brand">
-                    <span class="about-brand-mark">B</span>
-                    <span>Bizora</span>
-                </div>
-
-                <div class="about-copy">
-                    <span class="eyebrow">WHY BIZORA</span>
-
-                    <h2>Every business deserves a place online.</h2>
-
-                    <p>
-                        We want to make getting online simpler for
-                        small and growing businesses. Bizora brings
-                        your essential business information and
-                        catalogue together in one shareable place.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ================= FINAL CTA ================= -->
+        <!-- FINAL CTA -->
         <section class="final-cta">
             <div class="container final-cta-inner">
 
                 <div>
-                    <span class="cta-eyebrow">YOUR NEXT STEP</span>
+                    <span class="cta-eyebrow">START WITH THE ESSENTIALS</span>
 
-                    <h2>Your business.<br>Ready for more.</h2>
+                    <h2>
+                        Your business.<br>
+                        Ready for more.
+                    </h2>
 
                     <p>
-                        Start building your business presence with Bizora.
+                        Give your business a place of its own online.
                     </p>
                 </div>
 
@@ -413,30 +440,33 @@
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container">
 
             <div class="footer-main">
 
                 <div class="footer-brand-column">
+
                     <a href="#home" class="brand footer-brand">
                         <span class="brand-mark">B</span>
                         <span class="brand-name">Bizora</span>
                     </a>
 
                     <p class="footer-description">
-                        A simpler way for small businesses
-                        to build their online presence.
+                        Helping local and growing businesses
+                        build their online presence.
                     </p>
+
                 </div>
 
 
                 <div class="footer-column">
-                    <h3>Explore</h3>
-                    <a href="#platform">Platform</a>
-                    <a href="#how-it-works">How it works</a>
-                    <a href="#about">About Bizora</a>
+                    <h3>Platform</h3>
+                    <a href="#platform">Overview</a>
+                    <a href="#business-page">Business page</a>
+                    <a href="#catalogue">Catalogue</a>
+                    <a href="#grow-online">Grow Online</a>
                 </div>
 
 
@@ -448,14 +478,15 @@
 
 
                 <div class="footer-column">
-                    <h3>Get in touch</h3>
-                    <a href="mailto:hello@bizora.in">Contact</a>
+                    <h3>Contact</h3>
+                    <a href="mailto:hello@bizora.in">Get in touch</a>
                 </div>
 
             </div>
 
 
             <div class="footer-bottom">
+
                 <p>
                     © <span id="current-year">2026</span> Bizora.
                     All rights reserved.
@@ -464,6 +495,7 @@
                 <a href="#home" class="back-to-top">
                     Back to top ↑
                 </a>
+
             </div>
 
         </div>
