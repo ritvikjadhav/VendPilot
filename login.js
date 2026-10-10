@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initLoginForm();
 });
 
+// Show or hide the password
 function initLoginPasswordToggle() {
     document.querySelectorAll("[data-password-target]").forEach((button) => {
         button.addEventListener("click", () => {
@@ -28,6 +29,7 @@ function initLoginPasswordToggle() {
     });
 }
 
+// Handle login form
 function initLoginForm() {
     const form = document.getElementById("login-form");
 
@@ -45,12 +47,14 @@ function initLoginForm() {
 
     const buttonLabel = submitButton.querySelector("span");
 
+    // Display a message
     function showMessage(text, type = "error") {
         message.textContent = text;
         message.className = `form-message is-${type}`;
         message.hidden = false;
     }
 
+    // Clear messages
     function clearMessage() {
         message.textContent = "";
         message.className = "form-message";
@@ -69,20 +73,27 @@ function initLoginForm() {
         const emailAddress = email.value.trim();
         const userPassword = password.value;
 
+        // Validate email
         if (!emailAddress || !email.validity.valid) {
             email.setAttribute("aria-invalid", "true");
+
             showMessage("Please enter a valid email address.");
+
             email.focus();
             return;
         }
 
+        // Validate password
         if (!userPassword) {
             password.setAttribute("aria-invalid", "true");
+
             showMessage("Please enter your password.");
+
             password.focus();
             return;
         }
 
+        // Check Supabase connection
         const client = window.bizoraSupabase;
 
         if (!client?.auth) {
@@ -97,6 +108,7 @@ function initLoginForm() {
             return;
         }
 
+        // Disable button while signing in
         submitButton.disabled = true;
 
         if (buttonLabel) {
@@ -104,12 +116,17 @@ function initLoginForm() {
         }
 
         try {
-            const { data, error } = await client.auth.signInWithPassword({
-                email: emailAddress,
-                password: userPassword
-            });
+            // Sign in using Supabase
+            const { data, error } =
+                await client.auth.signInWithPassword({
+                    email: emailAddress,
+                    password: userPassword
+                });
 
+            // Handle authentication errors
             if (error) {
+                console.error("Bizora sign-in error:", error.message);
+
                 showMessage(
                     "We couldn't sign you in. Check your email and password, and confirm your email if required."
                 );
@@ -117,7 +134,8 @@ function initLoginForm() {
                 return;
             }
 
-            if (!data.session) {
+            // Confirm that a session exists
+            if (!data.session || !data.user) {
                 showMessage(
                     "No active session was created. Please try signing in again."
                 );
@@ -125,7 +143,8 @@ function initLoginForm() {
                 return;
             }
 
-            window.location.assign("./dashboard.html");
+            // Successful login: open the business creation page
+            window.location.assign("./create-business.html");
 
         } catch (error) {
             console.error("Bizora sign-in error:", error);
