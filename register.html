@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#123047">
-
     <meta
         name="description"
         content="Create your Bizora account and bring your business online."
@@ -12,31 +11,31 @@
 
     <title>Create Account | Bizora</title>
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
+    <!-- Styles -->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./auth.css">
 
+    <!-- Scripts: preserve this order -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+        defer
+    ></script>
+    <script src="./supabase.js" defer></script>
     <script src="./script.js" defer></script>
-<!-- Supabase JavaScript library -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<!-- Bizora Supabase connection -->
-<script src="./supabase.js"></script>
-
-<!-- Registration logic -->
-
     <script src="./auth.js" defer></script>
 </head>
 
 <body class="auth-page">
 
+    <!-- Header -->
     <header class="auth-header">
         <div class="auth-header-inner">
 
@@ -53,9 +52,10 @@
         </div>
     </header>
 
-
+    <!-- Main content -->
     <main class="auth-main">
 
+        <!-- Introduction -->
         <section class="auth-intro">
 
             <span class="auth-eyebrow">
@@ -76,7 +76,6 @@
 
                 <div class="auth-benefit">
                     <span class="benefit-check" aria-hidden="true">✓</span>
-
                     <div>
                         <h2>Your business profile</h2>
                         <p>Bring your essential business details together.</p>
@@ -85,7 +84,6 @@
 
                 <div class="auth-benefit">
                     <span class="benefit-check" aria-hidden="true">✓</span>
-
                     <div>
                         <h2>Your product catalogue</h2>
                         <p>Show customers your products or services.</p>
@@ -94,7 +92,6 @@
 
                 <div class="auth-benefit">
                     <span class="benefit-check" aria-hidden="true">✓</span>
-
                     <div>
                         <h2>One shareable business page</h2>
                         <p>Give customers one place to discover your shop.</p>
@@ -110,7 +107,7 @@
 
         </section>
 
-
+        <!-- Registration card -->
         <section class="auth-card" aria-labelledby="register-title">
 
             <div class="auth-card-heading">
@@ -128,9 +125,9 @@
 
             </div>
 
-
             <form id="register-form" novalidate>
 
+                <!-- Full name -->
                 <div class="form-field">
                     <label for="full-name">Full name</label>
 
@@ -146,7 +143,7 @@
                     >
                 </div>
 
-
+                <!-- Email -->
                 <div class="form-field">
                     <label for="email">Email address</label>
 
@@ -161,12 +158,11 @@
                     >
                 </div>
 
-
+                <!-- Password -->
                 <div class="form-field">
                     <label for="password">Password</label>
 
                     <div class="password-wrapper">
-
                         <input
                             type="password"
                             id="password"
@@ -188,7 +184,6 @@
                         >
                             Show
                         </button>
-
                     </div>
 
                     <p class="field-hint" id="password-hint">
@@ -196,12 +191,11 @@
                     </p>
                 </div>
 
-
+                <!-- Confirm password -->
                 <div class="form-field">
                     <label for="confirm-password">Confirm password</label>
 
                     <div class="password-wrapper">
-
                         <input
                             type="password"
                             id="confirm-password"
@@ -222,11 +216,10 @@
                         >
                             Show
                         </button>
-
                     </div>
                 </div>
 
-
+                <!-- Terms acceptance -->
                 <label class="terms-checkbox">
                     <input
                         type="checkbox"
@@ -243,7 +236,7 @@
                     </span>
                 </label>
 
-
+                <!-- Form feedback -->
                 <p
                     class="form-message"
                     id="register-message"
@@ -252,7 +245,7 @@
                     hidden
                 ></p>
 
-
+                <!-- Submit -->
                 <button
                     type="submit"
                     class="button button-primary auth-submit"
@@ -273,7 +266,7 @@
 
     </main>
 
-
+    <!-- Footer -->
     <footer class="auth-footer">
         <p>
             © <span id="current-year">2026</span> Bizora.
