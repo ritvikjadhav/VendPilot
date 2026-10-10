@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#123047">
+
+    <meta
+        name="description"
+        content="Create your Bizora account and bring your business online."
+    >
+
+    <title>Create Account | Bizora</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./auth.css">
+
+    <script src="./script.js" defer></script>
+    <script src="./auth.js" defer></script>
+</head>
+
+<body class="auth-page">
+
+    <header class="auth-header">
+        <div class="auth-header-inner">
+
+            <a href="./index.html" class="brand" aria-label="Bizora home">
+                <span class="brand-mark">B</span>
+                <span class="brand-name">Bizora</span>
+            </a>
+
+            <p class="auth-header-text">
+                Already have an account?
+                <a href="./login.html">Sign in</a>
+            </p>
+
+        </div>
+    </header>
+
+
+    <main class="auth-main">
+
+        <section class="auth-intro">
+
+            <span class="auth-eyebrow">
+                YOUR BUSINESS, YOUR NEXT STEP
+            </span>
+
+            <h1>
+                Bring your business
+                <span>online with Bizora.</span>
+            </h1>
+
+            <p class="auth-description">
+                Create your account, set up your business profile,
+                showcase your products, and share your shop with customers.
+            </p>
+
+            <div class="auth-benefits">
+
+                <div class="auth-benefit">
+                    <span class="benefit-check" aria-hidden="true">✓</span>
+
+                    <div>
+                        <h2>Your business profile</h2>
+                        <p>Bring your essential business details together.</p>
+                    </div>
+                </div>
+
+                <div class="auth-benefit">
+                    <span class="benefit-check" aria-hidden="true">✓</span>
+
+                    <div>
+                        <h2>Your product catalogue</h2>
+                        <p>Show customers your products or services.</p>
+                    </div>
+                </div>
+
+                <div class="auth-benefit">
+                    <span class="benefit-check" aria-hidden="true">✓</span>
+
+                    <div>
+                        <h2>One shareable business page</h2>
+                        <p>Give customers one place to discover your shop.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="auth-tagline">
+                <span class="auth-tagline-line"></span>
+                Your shop offline. Your presence online.
+            </div>
+
+        </section>
+
+
+        <section class="auth-card" aria-labelledby="register-title">
+
+            <div class="auth-card-heading">
+
+                <div class="auth-step-label">
+                    <span class="auth-step-dot"></span>
+                    ACCOUNT REGISTRATION
+                </div>
+
+                <h2 id="register-title">Create your account</h2>
+
+                <p>
+                    Start with your details. You'll set up your business next.
+                </p>
+
+            </div>
+
+
+            <form id="register-form" novalidate>
+
+                <div class="form-field">
+                    <label for="full-name">Full name</label>
+
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        minlength="2"
+                        maxlength="100"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-field">
+                    <label for="email">Email address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        maxlength="254"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-field">
+                    <label for="password">Password</label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a strong password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            maxlength="128"
+                            aria-describedby="password-hint"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-password-target="password"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                    <p class="field-hint" id="password-hint">
+                        Use at least 8 characters.
+                    </p>
+                </div>
+
+
+                <div class="form-field">
+                    <label for="confirm-password">Confirm password</label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            name="confirmPassword"
+                            placeholder="Enter your password again"
+                            autocomplete="new-password"
+                            minlength="8"
+                            maxlength="128"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-password-target="confirm-password"
+                            aria-label="Show confirm password"
+                            aria-pressed="false"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+                </div>
+
+
+                <label class="terms-checkbox">
+                    <input
+                        type="checkbox"
+                        id="accept-terms"
+                        name="acceptTerms"
+                        required
+                    >
+
+                    <span>
+                        I agree to the
+                        <a href="./terms.html">Terms of Service</a>
+                        and
+                        <a href="./privacy.html">Privacy Policy</a>.
+                    </span>
+                </label>
+
+
+                <p
+                    class="form-message"
+                    id="register-message"
+                    role="status"
+                    aria-live="polite"
+                    hidden
+                ></p>
+
+
+                <button
+                    type="submit"
+                    class="button button-primary auth-submit"
+                    id="register-submit"
+                >
+                    <span>Create account</span>
+                    <span aria-hidden="true">→</span>
+                </button>
+
+                <p class="auth-redirect">
+                    Already registered?
+                    <a href="./login.html">Sign in instead</a>
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer class="auth-footer">
+        <p>
+            © <span id="current-year">2026</span> Bizora.
+            Helping businesses build their online presence.
+        </p>
+
+        <a href="./index.html">Back to home</a>
+    </footer>
+
+</body>
+</html>
